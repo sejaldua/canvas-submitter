@@ -10,7 +10,10 @@ The changes I made to Will's code have to do with some HMTL quirks, as well as g
 Hours spent: 3
 
 Libraries used: 
-* selenium: ```python from selenium import webdriver```
+* selenium: 
+```python
+from selenium import webdriver
+```
 * os
 * time
 * datetime
@@ -23,7 +26,7 @@ Before one even attempts to use the code, the following must be done:
 1. You must [download Chrome Driver](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 2. In the terminal, type `sudo nano /etc/paths`
 
-```python
+```
 try:
   make sure /usr/local/bin is there
 except:
