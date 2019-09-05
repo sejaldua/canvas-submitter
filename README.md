@@ -10,7 +10,7 @@ The changes I made to Will's code have to do with some HMTL quirks, as well as g
 Hours spent: 3
 
 Libraries used: 
-* selenium: 
+* selenium
 ```python
 from selenium import webdriver
 ```
