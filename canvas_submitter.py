@@ -17,6 +17,8 @@ submission_dir = '/Users/sejaldua/Desktop/DIS/completed_assignments'
 submitted_dir = '/Users/sejaldua/Desktop/DIS/submitted_assignments'
 
 def submit_assignment(file_tup, site=site, my_username=my_username, file=local_pass_file, submission_dir=submission_dir, submitted_dir=submitted_dir):
+
+        
         driver = webdriver.Chrome()
         time.sleep(3)
         driver.get(site)
@@ -89,7 +91,13 @@ def submit_assignment(file_tup, site=site, my_username=my_username, file=local_p
         time.sleep(2)
 
         # move the file to the submitted folder
-        submitted_dir = os.path.join(submitted_dir, folder)
+        try:
+                submitted_dir = os.path.join(submitted_dir, folder)
+        except:
+                os.chdir(submitted_dir)
+                os.mkdir(folder)
+                submitted_dir = os.path.join(submitted_dir, folder)
+                
         submitted_file_name = 'Submitted ' + file_name
 
         submitted_file_location = os.path.join(submitted_dir, submitted_file_name)
